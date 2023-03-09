@@ -14,3 +14,19 @@ Przygotwanie środowiska wirtualnego, w VirtualBox.
 	12. Dodaje sobie folder udostępniony, by w razie potrzeby móc szybko przerzucać sobie pliki między hostem a VM.
 
 Instalacja systemu operacyjnego Debian.
+
+	W trakcie instalacji systemu otrzymałem sławetnego Kernel panic'a - jako fix ustawiłem 2 CPU w VB!
+
+	1. Wybieram opcję Install, bez interfejsu graficznego. W opcjach advanced możemy znaleźć instalację w trybie graficznym ekspert( dla zaawansowanych użytkoników), rescue mode, czyli zestawu narzędzi do próby odratowania naszego systemu, w przypadku awarii, automated install - instalacje automatyczną. Znajdziemy również odpowiedniki wyżej wymienionych narzędzi, tylko że nie w trybie graficznym.
+	2. Opcję językowe - Angielski.
+	3. W lokalizacji podaje Polskę. Other -> Europe -> Poland
+	4. Układ klawiatury wybieram en_US.UTF-8, czyli Amerykański gdyż z takiej korzystam jak zapewne każdy.
+	5. Zestaw znaków ustawiam na American English / z polskich korzystać nie będe.
+	6. Hostname, czyli jak widoczny będzie maszyna w sieci ustawiam na test-debian, jakąs nazwę w końcu trzeba dać.
+	7. Domeny nie ustawiam, bo nie korzystam i nie mam takowej nigdzie skonfigurowanej.
+	8. Ustawiam hasło dla roota, oraz tworze swoje wlasne konto.
+	9. Partycję dysku ustawiam ręcznie, na system przeznaczam rekomendowane 2GB, natomiast drugie 2GB przeznaczam na kolejną partycję, na której będe przechowywał część plików. W Guided partitioning możemy wybrać, by automatycznie	
+	utworzyło partycję na cały dysk, utworzyło partycję na cały dysk wraz z LVM (Logical Volume Manager, system który pozwala na zarządzanie przestrzenią pamięci, pozwala na łączenie różnych partycji w jeden wirtualny dysk), oraz to
+	samo co wcześniej tylko z zaszyfrowanym LVM. 
+	
+
