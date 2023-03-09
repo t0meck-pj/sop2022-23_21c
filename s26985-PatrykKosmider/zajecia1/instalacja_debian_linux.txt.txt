@@ -1,0 +1,16 @@
+Przygotwanie środowiska wirtualnego, w VirtualBox.
+	1. Utworzenie nowej maszyny (Debian x64)
+	2. Rozmiar pamięci RAM przydzielam na 4GB, na czas instalacji, by ta przebiegła szybciej.
+	3. Tworzę nowy dysk wirtualny VDI - format przeznaczony na VB, pozostałe VHD - przeznaczony jest dla Hyper-V, a VMDK dla VMWare.
+	4. Dysk wybieram przedzialany dynamicznie - nie potrzebuję dużej wydajności i szybkości, która jest lepsza w przypadku dysku stałego, gdyż maszynę stawiam tylko w celach edukacyjnych. Dysk dynamiczny również zwiększa na bieżąco,
+	gdy na naszej maszynie przybywa danych, a nie z góry zajmuje określony rozmiar.
+	5. Rozmiar dysku przydzielam na 4GB, by mieć zapas do polecanych 2GB. Duży rozmiar nie jest mi potrzebny, gdyż nie będe nic zaawansowanego tworzył na tej VM'ce.
+	6. W opcjach "System" - zmieniam urządzenie wskazujące na mysz PS/2, bo korzystam z myszki. Chipset/Boot Order/Inne zostawiam na domyślne. Tak samo nie zmieniam ilość CPU przypisanej VM, gdyż 1 w całości wystarczy.
+	7. Opcje "Ekran" - nie zmieniam, nie potrzeba więcej VRAM'u, niż domyślne 20MB przydzielone, ilość monitorów 1 oraz kontroler grafiki również zostaje domyślny - VMSVGA
+	8. Opcje "Dźwięk" - wyłączam, nie robię na maszynie nic związanego z audio więc obecnie nie jest mi potrzebny.
+	9. Pozostałe opcje VB zostawiam domyślne, sieć NAT by mieć dostęp do internetu (Pozostałe opcje : -bridged, czyli tryb w którym VM ma bezpośredni dostęp do sieci, -sieć wewnętrzna - umożliwia komunikacje tylko pomiędzy systemi operującymi w tej samej sieci wewnętrznej, -karta sieci izolowanej - komunikacja jest możliwa tylko i wyłącznie między hostem a VM, -sieć NAT - działa podobnie jak NAT, z różnicą, że operuje na grupach maszyn wirtualnych, umożliwia zmianę puli DHCP, on/off IPv6 i port forwarding. Możemy grupować maszyny w sieci, uniemożliwiając im komunikację między sobą gdy należą do innych, ale wszystkie będą miały dostęp do internetu, -niepodłączona - symulacja braku kabla w sieciówce.
+	10.Nie włączam portów szeregowych, gdyż nie przydadzą mi się i nie będe łączył się do maszyny po serial porcie.
+	11.Kontroler USB zostawiam włączony.
+	12. Dodaje sobie folder udostępniony, by w razie potrzeby móc szybko przerzucać sobie pliki między hostem a VM.
+
+Instalacja systemu operacyjnego Debian.
